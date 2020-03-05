@@ -28,4 +28,9 @@ class Role extends Model
             ->withPivot(ServiceRole::class)
             ->withTimestamps();
     }
+
+    public function teacher()
+    {
+        return $this->hasMany(Teacher::class, 'teacher_id');
+    }
 }

@@ -17,6 +17,11 @@ class CreateBuildingsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('address');
+            $table->unsignedBigInteger('marker_id');
+            $table->foreign('marker_id')
+                ->references('id')
+                ->on('markers')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }

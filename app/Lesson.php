@@ -9,7 +9,7 @@ class Lesson extends Model
     protected $table = 'lessons';
     protected $primaryKey = 'id';
 
-    protected $fillable = ['start_time', 'duration', 'week_day', 'start_date', 'end_date', 'capacity', 'accessibility'];
+    protected $fillable = ['start_time', 'duration', 'week_day', 'start_date', 'end_date', 'capacity', 'accessibility', 'required_presence'];
 
     protected $hidden = ['teaching_id', 'classroom_id', 'created_at', 'updated_at'];
 

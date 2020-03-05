@@ -46,4 +46,9 @@ class Subject extends Model
             ->withPivot(SubjectStudent::class)
             ->withTimestamps();
     }
+
+    public function page()
+    {
+        return $this->hasMany(Page::class);
+    }
 }

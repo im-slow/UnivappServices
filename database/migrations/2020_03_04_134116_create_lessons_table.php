@@ -22,6 +22,7 @@ class CreateLessonsTable extends Migration
             $table->unsignedBigInteger('classroom_id');
             $table->date('start_date');
             $table->date('end_date');
+            $table->boolean('required_presence');
             $table->foreign('classroom_id')
                 ->references('id')
                 ->on('classrooms')

@@ -54,6 +54,61 @@ class User extends Authenticatable implements JWTSubject
         return $this->belongsTo(University::class, 'university_id');
     }
 
+    public function sociallink()
+    {
+        return $this->hasMany(SocialLink::class);
+    }
+
+    public function ban()
+    {
+        return $this->belongsToMany(User::class)
+        ->using(Ban::class)
+        ->withPivot(Ban::class)
+        ->withTimestamps();
+    }
+
+    public function page()
+    {
+        return $this->hasMany(Page::class);
+    }
+
+    public function purchasednote()
+    {
+        return $this->belongsToMany(Note::class)
+            ->using(PurchasedNote::class)
+            ->withPivot(PurchasedNote::class)
+            ->withTimestamps();
+    }
+
+    public function token()
+    {
+        return $this->hasOne(Token::class);
+    }
+
+    public function upvote()
+    {
+        return $this->belongsToMany(Note::class)
+            ->using(Upvote::class)
+            ->withPivot(Upvote::class)
+            ->withTimestamps();
+    }
+
+    public function downvote()
+    {
+        return $this->belongsToMany(Note::class)
+            ->using(Downvote::class)
+            ->withPivot(Downvote::class)
+            ->withTimestamps();
+    }
+
+    public function reportnote()
+    {
+        return $this->belongsToMany(Note::class)
+            ->using(ReportNote::class)
+            ->withPivot(ReportNote::class)
+            ->withTimestamps();
+    }
+
     // TODO OuterKey
     /*
     public function rooms() {
