@@ -36,6 +36,6 @@ class CreateServiceRoleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('service_roles');
+        Schema::dropIfExists('service_role');
     }
 }

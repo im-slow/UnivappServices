@@ -19,6 +19,8 @@ class CreateClassroomsTable extends Migration
             $table->tinyInteger('floor');
             $table->text('directions');
             $table->integer('capacity');
+            $table->integer('columns');
+            $table->integer('rows');
             $table->boolean('accessibility');
             $table->unsignedBigInteger('building_id');
             $table->foreign('building_id')

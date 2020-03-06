@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReportNoteTable extends Migration
+class CreateDeskUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,23 @@ class CreateReportNoteTable extends Migration
      */
     public function up()
     {
-        Schema::create('report_note', function (Blueprint $table) {
+        Schema::create('desk_user', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title');
-            $table->string('description');
-            $table->unsignedBigInteger('note_id');
-            $table->unsignedBigInteger('user_id');
+            $table->date('date');
+            $table->time('start_time');
+            $table->time('end_time');
+            $table->boolean('check')->default(false);
+            $table->integer('seat');
+            $table->time('break_start_time')->nullable();
+            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('desk_id')->unsigned();
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users')
                 ->onDelete('cascade');
-            $table->foreign('note_id')
+            $table->foreign('desk_id')
                 ->references('id')
-                ->on('notes')
+                ->on('desks')
                 ->onDelete('cascade');
             $table->timestamps();
         });
@@ -38,6 +42,6 @@ class CreateReportNoteTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('report_note');
+        Schema::dropIfExists('desk_user');
     }
 }

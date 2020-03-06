@@ -36,6 +36,6 @@ class CreatePurchasedNoteTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('purchased_notes');
+        Schema::dropIfExists('purchased_note');
     }
 }

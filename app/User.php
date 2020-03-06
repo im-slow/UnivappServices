@@ -67,6 +67,14 @@ class User extends Authenticatable implements JWTSubject
         ->withTimestamps();
     }
 
+    public function report()
+    {
+        return $this->belongsToMany(User::class)
+            ->using(ReportUser::class)
+            ->withPivot(ReportUser::class)
+            ->withTimestamps();
+    }
+
     public function page()
     {
         return $this->hasMany(Page::class);
@@ -106,6 +114,30 @@ class User extends Authenticatable implements JWTSubject
         return $this->belongsToMany(Note::class)
             ->using(ReportNote::class)
             ->withPivot(ReportNote::class)
+            ->withTimestamps();
+    }
+
+    public function desk()
+    {
+        return $this->belongsToMany(Desk::class)
+            ->using(DeskUser::class)
+            ->withPivot(DeskUser::class)
+            ->withTimestamps();
+    }
+
+    public function classroom()
+    {
+        return $this->belongsToMany(Classroom::class)
+            ->using(ClassroomUser::class)
+            ->withPivot(Classroom::class)
+            ->withTimestamps();
+    }
+
+    public function room()
+    {
+        return $this->belongsToMany(Room::class)
+            ->using(RoomUser::class)
+            ->withPivot(RoomUser::class)
             ->withTimestamps();
     }
 

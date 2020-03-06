@@ -18,4 +18,8 @@ class University extends Model
     public function department() {
         return $this->hasMany(Departments::class);
     }
+
+    public function university() {
+        return $this->hasMany(Room::class);
+    }
 }

@@ -36,6 +36,6 @@ class CreateImageMarkerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('image_markers');
+        Schema::dropIfExists('image_marker');
     }
 }
