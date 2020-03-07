@@ -18,15 +18,22 @@ use Illuminate\Http\Request;
 //    return $request->user();
 //});
 
-Route::post('login', 'ApiController@login');
-Route::post('register', 'ApiController@register');
+Route::prefix('v1')->group(function () {
 
-Route::group(['middleware' => 'auth.jwt'], function () {
-    Route::get('logout', 'ApiController@logout');
+    Route::post('login', 'UserController@login');
+    Route::post('register', 'UserController@register');
 
-    Route::get('tasks', 'TaskController@index');
-    Route::get('tasks/{id}', 'TaskController@show');
-    Route::post('tasks', 'TaskController@store');
-    Route::put('tasks/{id}', 'TaskController@update');
-    Route::delete('tasks/{id}', 'TaskController@destroy');
+    Route::group(['middleware' => 'auth.jwt'], function () {
+        Route::get('/logout', 'UserController@logout');
+        Route::get('/updateRole', 'UserController@updateRole');
+        Route::get('/remove', 'UserController@remove');
+
+//        Route::get('tasks', 'TaskController@index');
+//        Route::get('tasks/{id}', 'TaskController@show');
+//        Route::post('tasks', 'TaskController@store');
+//        Route::put('tasks/{id}', 'TaskController@update');
+//        Route::delete('tasks/{id}', 'TaskController@destroy');
+    });
 });
+
+

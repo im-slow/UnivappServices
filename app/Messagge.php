@@ -9,7 +9,7 @@ class Messagge extends Model
     protected $table = 'messagges';
     protected $primaryKey = 'id';
 
-    protected $fillable = ['text', 'important', 'seen'];
+    protected $fillable = ['text', 'important', 'seen', 'date_sent', 'date_seen'];
 
     protected $hidden = ['user_id', 'room_id', 'created_at', 'updated_at'];
 

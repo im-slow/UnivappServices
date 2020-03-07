@@ -18,6 +18,8 @@ class CreateMessaggesTable extends Migration
             $table->string('text');
             $table->boolean('important')->default(false);
             $table->boolean('seen')->default(false);
+            $table->date("date_sent");
+            $table->date("date_seen");
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('room_id');
             $table->foreign('user_id')

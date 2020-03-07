@@ -3,20 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c9ac411e-3176-4cab-9be8-f67292c00d75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Classroom.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Classroom.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Downvote.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Downvote.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/University.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/University.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_04_120617_create_role_user_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_04_120617_create_role_user_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_04_122507_create_service_role_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_04_122507_create_service_role_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_04_134114_create_classrooms_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_04_134114_create_classrooms_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_04_140343_create_subject_teacher_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_04_140343_create_subject_teacher_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_04_140954_create_subject_faculty_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_04_140954_create_subject_faculty_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_04_162747_create_subject_lesson_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_04_162747_create_subject_lesson_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_05_154426_create_image_marker_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_05_154426_create_image_marker_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_05_171210_create_purchased_note_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_05_171210_create_purchased_note_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_05_174405_create_tag_note_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_05_174405_create_tag_note_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_05_174936_create_report_note_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_05_174936_create_report_note_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/APIController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Messagge.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Messagge.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_06_180031_create_messagges_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_06_180031_create_messagges_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +171,7 @@
       <option name="presentableId" value="Default" />
       <updated>1583163409060</updated>
       <workItem from="1583163411706" duration="2643000" />
-      <workItem from="1583248569579" duration="47374000" />
+      <workItem from="1583248569579" duration="58613000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1583432486295</created>
@@ -187,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583432486295</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="messaggi e aule. bugfix">
+      <created>1583520067587</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583520067588</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,21 +195,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="messaggi e aule. bugfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="messaggi e aule. bugfix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="66" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583259169125">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="66" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1583259169125" />
-    <state x="523" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583262333256">
+    <state x="523" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583579961722">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="523" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1583262333256" />
-    <state x="256" y="5" key="CommitChangelistDialog2" timestamp="1583432484863">
+    <state x="523" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1583579961722" />
+    <state x="256" y="5" key="CommitChangelistDialog2" timestamp="1583520065578">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="256" y="5" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583432484863" />
+    <state x="256" y="5" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583520065578" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1583170490503">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
