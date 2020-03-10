@@ -11,7 +11,7 @@ class Building extends Model
 
     protected $fillable = ['name', 'description'];
 
-    protected $hidden = ['marker_id', 'building_id', 'created_at', 'updated_at'];
+    protected $hidden = ['marker_id', 'created_at', 'updated_at'];
 
     public function classroom()
     {

@@ -11,7 +11,7 @@ class Lesson extends Model
 
     protected $fillable = ['start_time', 'duration', 'week_day', 'start_date', 'end_date', 'capacity', 'accessibility', 'required_presence'];
 
-    protected $hidden = ['teaching_id', 'classroom_id', 'created_at', 'updated_at'];
+    protected $hidden = ['teacher_id', 'classroom_id', 'created_at', 'updated_at'];
 
     public function classroom()
     {

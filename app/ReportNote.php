@@ -3,8 +3,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class ReportNote extends Model
+class ReportNote extends Pivot
 {
     protected $table = 'report_note';
     protected $primaryKey = 'id';

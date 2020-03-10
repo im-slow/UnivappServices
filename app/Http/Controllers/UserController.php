@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Tymon\JWTAuth\JWTAuth;
+
 use App\User;
 use App\Role;
 use App\RoleUser;
@@ -11,6 +11,8 @@ use Tymon\JWTAuth\Exceptions\JWTException;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\RegistrationFormRequest;
+use Tymon\JWTAuth\Facades\JWTAuth;
+
 class UserController extends Controller
 {
     /**

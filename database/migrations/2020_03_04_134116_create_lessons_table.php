@@ -18,7 +18,7 @@ class CreateLessonsTable extends Migration
             $table->tinyInteger('start_time');
             $table->tinyInteger('duration');
             $table->tinyInteger('week_day');
-            $table->unsignedBigInteger('teaching_id');
+            $table->unsignedBigInteger('teacher_id');
             $table->unsignedBigInteger('classroom_id');
             $table->date('start_date');
             $table->date('end_date');
@@ -27,7 +27,7 @@ class CreateLessonsTable extends Migration
                 ->references('id')
                 ->on('classrooms')
                 ->onDelete('cascade');
-            $table->foreign('teaching_id')
+            $table->foreign('teacher_id')
                 ->references('id')
                 ->on('teachers')
                 ->onDelete('cascade');

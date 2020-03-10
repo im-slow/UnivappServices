@@ -11,7 +11,7 @@ class Classroom extends Model
 
     protected $fillable = ['name', 'floor', 'directions', 'capacity', 'accessibility', 'columns', 'rows'];
 
-    protected $hidden = ['marker_id', 'building_id', 'created_at', 'updated_at'];
+    protected $hidden = ['building_id', 'created_at', 'updated_at'];
 
     public function building()
     {
@@ -21,11 +21,6 @@ class Classroom extends Model
     public function lesson()
     {
         return $this->hasMany(Lesson::class);
-    }
-
-    public function marker()
-    {
-        return $this->belongsTo(Marker::class, 'marker_id');
     }
 
     public function desk()

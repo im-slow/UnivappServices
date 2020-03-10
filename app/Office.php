@@ -18,6 +18,10 @@ class Office extends Model
         return $this->belongsTo(Building::class, 'building_id');
     }
 
+    public function marker() {
+        return $this->belongsTo(Marker::class, 'marker_id');
+    }
+
     public function teacher()
     {
         return $this->hasMany(Teacher::class);
