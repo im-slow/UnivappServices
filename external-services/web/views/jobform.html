@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+<div id="navBar"></div>
+<section class="hero is-link is-fullheight is-bold">
+    <div class="container is-fluid">
+        <div class="is-size-1 is-family-sans-serif has-text-centered firstTitle">Crea un'offerta lavorativa e trova i talenti!</div>
+        <form action="" onsubmit="sender(this);return false;">
+            <div class="field">
+                <label class="label is-size-5 is-family-sans-serif">Titolo offerta</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Text input" id="title">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label label is-size-5 is-family-sans-serif">Descrizione</label>
+                <div class="control">
+                    <textarea class="textarea" placeholder="Textarea" id="description"></textarea>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label label is-size-5 is-family-sans-serif">Seleziona le skills standard</label>
+                <div class="control">
+                    <div id="skilllist">
+                    </div>
+                </div>
+            </div><br>
+            <div class="field">
+                <label class="label is-size-5 is-family-sans-serif">Dominio d'interesse</label>
+                <div class="control">                        
+                            <select class="input inputField-sm" id="domainList" name="domain" >
+                            </select>
+                            <div id="nextprevbuttons"></div>
+                </div>
+            </div>
+            <div class="field input-skills-aggiuntive">
+                <label class="label is-size-5 is-family-sans-serif">Skills aggiuntive</label>
+                <div class="control">
+                    <div class="secSkill">
+                        <input class="input inputField-md secSkillInput" type="text"  placeholder="Skill aggiuntiva" name="skill0">
+                        <select class="input inputField-sm skillTier" name="skilltier0">
+                            <option value=""  disabled selected>Seleziona livello d'importanza</option>
+                            <option value="basso">Basso</option>
+                            <option value="medio">Medio</option>
+                            <option value="alto">Alto</option>
+                        </select>
+                        <span class="icon is-large plus-circle">
+                            <i class="fas fa-2x fa-plus-circle"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+    <!--
+                        High Priority skills<input type="text" name="domain"></input><br>
+                        Medium Priority skills<input type="text" name="domain"></input><br>
+                        Low Priority skills<input type="text" name="domain"></input><br>
+    -->
+    <!--<input type='hidden' name='array' id='array' value=''></input>-->
+    <div class="field is-grouped">
+        <p class="control">
+            <input class="button is-warning" type="submit">
+        </p>
+        <p class="control">
+            <button class="button">
+                Esci
+            </button>
+        </p>
+        <p class="control">
+            <button class="button is-danger">
+                Reset post
+            </button>
+        </p>
+    </div>
+    </form>
+    </div>
+</section>
+</body>
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="../js/ws/SkillsService.js"></script>
+<script>
+    $(function(){
+        $("#navBar").load("navbar.html");
+    });
+</script>
+<script>
+    var fieldnumber=1;
+    $(function add() {
+        $(".plus-circle").click(function () {
+            console.log("DEBUG >> CLICK PLUS CIRCLE");
+            $(".plus-circle").remove();
+            $(".input-skills-aggiuntive").append("                        <div class=\"control\">\n" +
+                "<div class='secSkill'>"+
+                "                            <input class=\"input inputField-md secSkillInput\" type=\"text\" placeholder=\"Skill aggiuntiva\" name='skill"+fieldnumber+"'>\n" +
+                "                            <select class=\"input inputField-sm skillTier\" name=\'skilltier"+fieldnumber+"\'>\n" +
+                "                                <option value=\"\" disabled selected>Seleziona livello d'importanza</option>\n" +
+                "                                <option value=\"basso\">Basso</option>\n" +
+                "                                <option value=\"medio\">Medio</option>\n" +
+                "                                <option value=\"alto\">Alto</option>\n" +
+                "                            </select>\n" +
+                "                            <span class=\"icon is-large plus-circle\">\n" +
+                "                                <i class=\"fas fa-2x fa-plus-circle\"></i>\n" +
+                "                            </span>\n" +
+                "                        </div>"+
+                "                        </div>")
+            add();
+            fieldnumber++;
+        });
+    });
+</script>
+
+</html>

@@ -1,0 +1,63 @@
+
+#matches li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.row{
+
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.lefta{
+    text-align: left;
+    text-transform:capitalize;
+}
+.righta{
+    float: right;
+    padding-right: 20px;
+}
+#skilllist{
+    border: 2px inset darkblue;
+    height: 260px;
+    overflow-x: auto;
+}
+
+.firstTitle{
+    padding-top: 40px;
+}
+
+.secondTitle{
+    padding-top: 50px;
+}
+
+.inputField-md {
+
+    width: 300px !important;
+}
+.inputField-sm {
+
+    width: 250px !important;
+}
+.buttonskilllist{
+    width:150px;
+    
+}
+.textcheckbox{
+    color:black;
+    text-transform:capitalize;
+    padding-left:1em;
+    font-family: "BlinkMacSystemFont",-apple-system,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+}
+#profileinfo{
+    padding-top:20px;
+    padding-left:20px;
+}
+.grayname{
+color: gray;
+}
+.capitalize{
+    text-transform: capitalize;
+}

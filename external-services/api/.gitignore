@@ -1,0 +1,5 @@
+node_modules/
+public/images/
+public/images/propics/*
+public/temp/*
+!public/images/propics/default.png

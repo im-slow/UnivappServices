@@ -1,0 +1,66 @@
+"use strict";
+
+// Imports
+const mysql = require("mysql");
+const redis = require("redis"), client = redis.createClient();
+
+class Cacher {
+
+    query_users = "SELECT id, name, surname, skills FROM users";
+    query_jobs = "SELECT * FROM jobs";
+
+    constructor() {
+
+    }
+
+    connect(db_connection_string) {
+
+        this.connection = mysql.createConnection(db_connection_string);
+        connect_aux(this.connection);
+    }
+
+    /**
+     * @param {string} query
+     */
+    set query(query) {
+
+        this.query = query;
+    }
+
+    startCache() {
+
+        console.log("Caching...");
+        this.connection.query(this.query_users, function (err, results) {
+            
+            if(err) throw err;
+            
+            results.forEach(result => {
+                client.hset( "users", result.id , "{ name: '" + result.name + " " + result.surname + "'; skills: '" + result.skills + "'}" );
+            });
+            
+            console.log("Users Cached...");
+        });
+
+        this.connection.query(this.query_jobs, function (err, results) {
+            if(err) throw err;
+
+            results.forEach(result => {
+                client.hset("jobs", result.id, "{ name: '" + result.name + "'; skills: '" + result.skills + "'}");
+            });
+
+            // Flagging the database as cached 
+            client.set("cached", "true");
+            console.log("Jobs Cached...");
+        });
+    }
+}
+
+function connect_aux(connection) {
+    connection.connect(function (err) {
+        if(err) throw err;
+        console.log("Succesfully connected to MySql");
+    })
+}
+
+
+module.exports = new Cacher;

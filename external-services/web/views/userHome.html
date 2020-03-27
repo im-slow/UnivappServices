@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/table.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    </head>
+
+    <body>
+
+        <div id="navBar"></div>
+        <section class="hero is-link is-fullheight is-bold">
+
+                <div class="container">
+                    <div class="is-size-1 is-family-sans-serif has-text-centered firstTitle">Ti aiutiamo noi a trovare il lavoro che fa per te...</div>
+                    <div class="secondTitle is-size-5 is-family-sans-serif">In base al tuo profilo</div>
+
+
+                    <div class="table-users">
+                        <div class="header">Guarda le offerte che abbiamo per te</div>
+
+                        <table class="table-user-append" cellspacing="0">
+                            <tr>
+                                <th>Picture</th>
+                                <th>Offerta lavorativa</th>
+                                <th>Matching percentage</th>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+
+        </section>
+
+    </body>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+
+    <script src="../js/ws/MatchService.js"></script>
+    <script>
+        $(function(){
+            $("#navBar").load("navbar.html");
+        });
+    </script>
+
+</html>

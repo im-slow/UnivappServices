@@ -1,0 +1,15 @@
+{
+  "name": "cacher",
+  "version": "1.0.0",
+  "description": "Caching system from Mysql to Redis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cache",
+    "redis"
+  ],
+  "author": "Pietro Ciammaricone",
+  "license": "ISC"
+}
