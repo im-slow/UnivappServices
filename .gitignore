@@ -22,4 +22,6 @@ Homestead.json
 /.vagrant
 .phpunit.result.cache
 /laravel-integration/.idea/
+/.idea
 /laravel-integration/vendor
+

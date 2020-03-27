@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a7238e46-fec1-4801-93a5-e74d5439a6e7" name="Default Changelist" comment="" />
+    <list default="true" id="a7238e46-fec1-4801-93a5-e74d5439a6e7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -171,7 +174,7 @@
       <workItem from="1585064837855" duration="7493000" />
       <workItem from="1585152278850" duration="16014000" />
       <workItem from="1585181419860" duration="985000" />
-      <workItem from="1585309604354" duration="4951000" />
+      <workItem from="1585309604354" duration="5718000" />
     </task>
     <task id="LOCAL-00001" summary=".env">
       <created>1584472047199</created>
@@ -208,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585315477112</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Dir - External Services API">
+      <created>1585315872702</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1585315872702</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,13 +227,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value=".env" />
     <MESSAGE value="Guzzle e External Services API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Guzzle e External Services API" />
+    <MESSAGE value="Dir - External Services API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dir - External Services API" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="504" y="11" key="CommitChangelistDialog2" timestamp="1585315421969">
+    <state x="504" y="11" key="CommitChangelistDialog2" timestamp="1585315870515">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="504" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585315421969" />
+    <state x="504" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585315870515" />
     <state x="450" y="226" key="NewPhpClassDialog" timestamp="1585160831113">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
