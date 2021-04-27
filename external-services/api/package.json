@@ -20,7 +20,7 @@
     "mysql": "^2.17.1",
     "optimized-quicksort": "^1.1.1",
     "path": "^0.12.7",
-    "redis": "^2.8.0",
+    "redis": "^3.1.1",
     "request": "^2.88.0"
   }
 }
